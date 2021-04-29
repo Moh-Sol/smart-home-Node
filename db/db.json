@@ -68,7 +68,7 @@
       "id": "SPE1",
       "type": "Speaker",
       "name": "Living room",
-      "on" : false,
+      "on" : 0,
       "stream": { 
         "file" : "testfile.mp3",
         "name" : "testfile"
