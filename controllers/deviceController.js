@@ -9,6 +9,7 @@ const ac_controller = (req, res) => {
     let isItOn = extra_functions.onOrOff(req.query.state);
     let id = "AC1" /* ID för AC som vi har i DB*/
     let acTemperature = req.query.temperature;
+
     /* denna kommande if-sats är för att hindra att state för device ändras när användare skickar inte query till server,
     te.x för att device inte stängas av när användaren skickar något undefined value.
     */
@@ -242,15 +243,8 @@ const speaker_controller = (req, res) => {
             })
             .value();
         update(); // tell frontend to update state.
-
-        // if (isItOn === true) {
-        //     res.redirect('/speakers/SPE1/stream'); 
-        // } else  res.end(' Speaker is updatded')
-
-      
-        res.send(' Speaker is updatded')
-       
-    }
+        res.send(' Speaker is updatded');
+        }
     else {
         res.send(' You need to send "on" eller "off" i state field, te.x : &state=on ');
     }
