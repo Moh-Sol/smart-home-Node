@@ -140,7 +140,6 @@ const light_controller = (req, res) => {
 
 const blind_controller = (req, res) => {
     let isItOn = extra_functions.upOrDown(req.query.state);
-    console.log(isItOn)
 
     let id = 'BLI1';
     if (isItOn !== undefined) {
@@ -204,7 +203,6 @@ const lock_controller = (req, res) => {
 const camera_controller = (req, res) => {
 
     let isItOn = extra_functions.onOrOff(req.query.state);
-    console.log(isItOn)
 
     let id = 'CAM1';
     if (isItOn !== undefined) {
@@ -232,7 +230,6 @@ const camera_controller = (req, res) => {
 const speaker_controller = (req, res) => {
 
     let isItOn = extra_functions.onOrOff(req.query.state);
-    console.log(isItOn)
 
     let id = 'SPE1';
     if (isItOn !== undefined) {

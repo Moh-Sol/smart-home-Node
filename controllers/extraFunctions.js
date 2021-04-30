@@ -18,6 +18,7 @@ let upOrDown = (state) => {
 /* Denna function för att returnera det senaste rätt value  för temperature när anvädaren inte skickar value eller skickar fel value,  d.v.s för att inte få value som är inte number, då kan användare får det senaste value som var rätt*/
 let checkAcTemperature = (temperature) => {
     let oldTemperature = db.get('devices').find({ id: "AC1" }).value().temperature;
+    
     if (temperature !== undefined && !(isNaN(temperature)) && temperature !== '') {
         return Number(temperature)
     }
