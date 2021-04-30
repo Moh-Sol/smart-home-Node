@@ -2,7 +2,6 @@ const { db, update } = require('../db/index');
 const extra_functions = require('./extraFunctions');
 
 
-
 // ---------------------------------------------
 const ac_controller = (req, res) => {
 
@@ -24,6 +23,9 @@ const ac_controller = (req, res) => {
         update(); // tell frontend to update state.
 
         res.send(' AC is updatded')
+
+
+
     }
     else {
         res.send(' You need to send "on" eller "off" i state field, te.x : &state=on ');
@@ -241,13 +243,21 @@ const speaker_controller = (req, res) => {
             .value();
         update(); // tell frontend to update state.
 
+        // if (isItOn === true) {
+        //     res.redirect('/speakers/SPE1/stream'); 
+        // } else  res.end(' Speaker is updatded')
+
+      
         res.send(' Speaker is updatded')
+       
     }
     else {
         res.send(' You need to send "on" eller "off" i state field, te.x : &state=on ');
     }
 
 }
+
+
 
 
 

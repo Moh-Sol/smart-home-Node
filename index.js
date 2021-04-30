@@ -1,4 +1,5 @@
 const { app } = require('./core');
+const fs = require('fs')
 
 const devicesRouter = require('./router/devices')
 app.listen(3000, () => {
@@ -9,9 +10,15 @@ app.listen(3000, () => {
 
 
 
-app.use('/devices',devicesRouter);
+app.use('/devices', devicesRouter);
 
 
 
+
+/* Denna get för att få ljudet i spekers funkar */
+app.get('/speakers/SPE1/stream', (req, res) => {
+    const src = fs.createReadStream('./db/audio/testfile.mp3');
+    src.pipe(res);
+})
 
 
