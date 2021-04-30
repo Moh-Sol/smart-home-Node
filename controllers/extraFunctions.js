@@ -38,7 +38,6 @@ let checkBrightness = (brightness, id) => {
 }
 
 
-
 // Denna funktion ska returnera  ett  viss HEX color när för att kunna användare välja ljus färg mellan 4 färgar  ,
 // plus att den ska returnera  det senaste rätt color när anvädaren inte skickar något value eller skickar fel value.
 let checkColor = (color, id) => {
