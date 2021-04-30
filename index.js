@@ -15,10 +15,3 @@ app.use('/devices', devicesRouter);
 
 
 
-/* Denna get för att få ljudet i spekers funkar */
-app.get('/speakers/SPE1/stream', (req, res) => {
-    const src = fs.createReadStream('./db/audio/testfile.mp3');
-    src.pipe(res);
-})
-
-
